@@ -1,0 +1,17 @@
+# The configuration schema is defined by the service.proto file.
+# https://github.com/googleapis/googleapis/blob/master/google/api/service.proto
+
+type: google.api.Service
+config_version: 3
+name: "*.apigateway.golden-tempest-325806.cloud.goog"
+title: API Gateway + Cloud Run gRPC
+apis:
+  - name: bot.HandleUserMessage
+usage:
+  rules:
+  - selector: bot.HandleUserMessage
+    allow_unregistered_calls: true
+backend:
+  rules:
+    - selector: "*"
+      address: grpcs://python-grpc-bookstore-server-HASH-uc.a.run.app
