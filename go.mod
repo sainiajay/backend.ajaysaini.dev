@@ -1,4 +1,4 @@
-module ajaysaini-dev
+module github.com/sainiajay/backend.ajaysaini.dev
 
 go 1.16
 

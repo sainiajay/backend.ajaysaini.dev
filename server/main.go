@@ -1,11 +1,12 @@
 package main
 
 import (
-	"ajaysaini-dev/services/bot"
 	"context"
 	"log"
 	"net"
 	"os"
+
+	"github.com/sainiajay/backend.ajaysaini.dev/services/bot"
 
 	"google.golang.org/grpc"
 )

@@ -1,7 +1,6 @@
 package main
 
 import (
-	"ajaysaini-dev/services/bot"
 	"context"
 	"crypto/tls"
 	"crypto/x509"
@@ -9,6 +8,7 @@ import (
 	"log"
 	"time"
 
+	"github.com/sainiajay/backend.ajaysaini.dev/services/bot"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 )
