@@ -37,8 +37,13 @@ func NewConn(host string, insecure bool) (*grpc.ClientConn, error) {
 	return grpc.Dial(host, opts...)
 }
 
+const (
+	remote = "api.ajaysaini.dev:443"
+	local  = ":9000"
+)
+
 func main() {
-	address := flag.String("address", "apibackend-rvovnjllja-as.a.run.app:443", "Address where service is running.")
+	address := flag.String("address", remote, "Address where service is running.")
 	flag.Parse()
 
 	conn, err := NewConn(*address, false)

@@ -1,7 +1,7 @@
 //protoc --go_out=. --go-grpc_out=. proto/services/bot_service.proto
 
 syntax = "proto3";
-package chat;
+package services.bot;
 
 option go_package="services/bot";
 

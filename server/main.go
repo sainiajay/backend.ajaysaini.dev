@@ -1,25 +1,13 @@
 package main
 
 import (
-	"context"
 	"log"
 	"net"
 	"os"
 
 	"github.com/sainiajay/backend.ajaysaini.dev/services/bot"
-
 	"google.golang.org/grpc"
 )
-
-type server struct {
-	bot.UnimplementedBotServiceServer
-}
-
-func (s *server) HandleUserMessage(ctx context.Context, message *bot.Message) (*bot.Message, error) {
-	body := message.GetBody()
-	log.Printf("Received: %v", body)
-	return &bot.Message{Body: "ACK " + message.GetBody()}, nil
-}
 
 func main() {
 	port := os.Getenv("PORT")
